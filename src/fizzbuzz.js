@@ -1,22 +1,19 @@
 // TODO: Write your function in this file
 function fizzBuzz(lower, upper) {
-  addNumbers = Array.from(
-    { length: upper - lower + 1 },
-    (_, index) => index + lower
-  )
+  const results = []
   for (let i = lower; i <= upper; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-      console.log('FizzBuzz')
+      results.push('FizzBuzz')
     } else if (i % 3 === 0) {
-      console.log('Fizz')
+      results.push('Fizz')
     } else if (i % 5 === 0) {
-      console.log('Buzz')
+      results.push('Buzz')
     } else {
-      console.log(i)
+      results.push(i)
     }
   }
-  return addNumbers
+  return results
 }
-console.log(fizzBuzz(1, 54))
+
 // TODO: Change undefined below to the name of your function
 module.exports = fizzBuzz
